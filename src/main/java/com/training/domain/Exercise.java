@@ -1,5 +1,8 @@
 package com.training.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,15 +12,16 @@ public class Exercise {
 
     @Id
     @GeneratedValue
+    @JsonIgnore
     private Long id;
+
     private String exerciseName;
     private String exerciseURL;
     private boolean exerciseSelected;
     public Exercise() {
     }
 
-    public Exercise(final Long id, final String exerciseName, final String exerciseURL, final boolean exerciseSelected) {
-        this.id = id;
+    public Exercise(final String exerciseName, final String exerciseURL, final boolean exerciseSelected) {
         this.exerciseName = exerciseName;
         this.exerciseURL = exerciseURL;
         this.exerciseSelected = exerciseSelected;
