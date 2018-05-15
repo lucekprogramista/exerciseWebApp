@@ -1,0 +1,13 @@
+<ul class="list-group">
+    <li *ngFor="let exercise of exercises" class="list-group-item">
+        <div class="exercise-list">
+            <!--<button type="checkbox"-->
+                   <!--class="list-child"-->
+                   <!--(change)="onExerciseChange($event, exercise)"-->
+                   <!--[checked]="exercise.exersciseSelected">-->
+            <button type="button" class="btn btn-success">{{exercise.exerciseName}}</button>
+            <!--<span ngClass="{{exercise.exerciseSelected ? 'name completed' : 'name'}}">{{ exercise.exerciseName }}</span>-->
+        </div>
+    </li>
+
+</ul>

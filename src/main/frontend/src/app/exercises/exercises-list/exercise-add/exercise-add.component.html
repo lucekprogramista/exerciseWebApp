@@ -1,0 +1,7 @@
+<div class="form-group">
+    <input type="text"
+           class="form-control"
+           placeholder="New exercise..."
+           (keyup.enter)="onExerciseAdd($event)"
+            ([ngModel])="addExerciseValue" />
+</div>
