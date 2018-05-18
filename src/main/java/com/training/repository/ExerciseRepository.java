@@ -2,10 +2,10 @@ package com.training.repository;
 
 import com.training.domain.Exercise;
 import org.springframework.data.repository.CrudRepository;
-
-import javax.persistence.EntityManager;
+import org.springframework.transaction.annotation.Transactional;
 
 public interface ExerciseRepository extends CrudRepository<Exercise, Long> {
 
-    void deleteByExerciseName(String exerciseName);
+    @Transactional
+    void deleteExercisesByExerciseName(String exerciseName);
 }

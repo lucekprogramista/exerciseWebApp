@@ -27,7 +27,7 @@ public class ExerciseServiceImpl implements ExerciseService {
 
     @Override
     public void deleteExercise(final String exerciseName){
-        exerciseRepository.deleteByExerciseName(exerciseName);
+        exerciseRepository.deleteExercisesByExerciseName(exerciseName);
     }
 
     @Override
